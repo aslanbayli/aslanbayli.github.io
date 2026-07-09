@@ -1,0 +1,22 @@
+---
+interface Props {
+  status: "Open Source" | "Production" | "In Progress" | "Research" | string;
+}
+
+const { status } = Astro.props;
+const colorMap: Record<string, string> = {
+  "Open Source": "text-[color:var(--blue)]",
+  Production: "text-[color:var(--success)]",
+  "In Progress": "text-[color:var(--orange)]",
+  Research: "text-[color:var(--purple)]",
+};
+---
+
+<span
+  class:list={[
+    "inline-flex h-8 items-center rounded-full border border-[color:var(--border)] bg-white/[.03] px-3 text-sm font-semibold",
+    colorMap[status] ?? "text-[color:var(--text-secondary)]",
+  ]}
+>
+  {status}
+</span>

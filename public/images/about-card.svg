@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="660" viewBox="0 0 960 660" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering workspace</title>
+  <desc id="desc">An abstract interface showing model, retrieval, and deployment panels.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop stop-color="#181F2B"/>
+      <stop offset="1" stop-color="#10141D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#FF6B3D"/>
+      <stop offset=".62" stop-color="#C56CFF"/>
+      <stop offset="1" stop-color="#62A7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="660" fill="#090B12"/>
+  <circle cx="170" cy="110" r="220" fill="#FF6B3D" opacity=".16"/>
+  <circle cx="850" cy="220" r="260" fill="#C56CFF" opacity=".13"/>
+  <rect x="86" y="78" width="788" height="504" rx="34" fill="url(#panel)" stroke="rgba(255,255,255,.1)"/>
+  <rect x="128" y="126" width="238" height="390" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="406" y="126" width="426" height="170" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="406" y="334" width="426" height="182" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="164" y="168" width="110" height="12" rx="6" fill="#F7F8FB" opacity=".85"/>
+  <rect x="164" y="204" width="154" height="10" rx="5" fill="#A5ADBC" opacity=".45"/>
+  <rect x="164" y="232" width="120" height="10" rx="5" fill="#A5ADBC" opacity=".35"/>
+  <path d="M164 332h154M164 376h154M164 420h154" stroke="rgba(255,255,255,.1)" stroke-width="2"/>
+  <circle cx="164" cy="332" r="8" fill="#FF6B3D"/>
+  <circle cx="164" cy="376" r="8" fill="#C56CFF"/>
+  <circle cx="164" cy="420" r="8" fill="#62A7FF"/>
+  <rect x="448" y="168" width="168" height="12" rx="6" fill="#F7F8FB" opacity=".85"/>
+  <rect x="448" y="210" width="322" height="12" rx="6" fill="url(#accent)" opacity=".9"/>
+  <rect x="448" y="252" width="246" height="10" rx="5" fill="#A5ADBC" opacity=".36"/>
+  <path d="M452 462c64-100 122-54 178-112 49-50 84-31 138 32" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="452" cy="462" r="12" fill="#FF6B3D"/>
+  <circle cx="630" cy="350" r="12" fill="#C56CFF"/>
+  <circle cx="768" cy="382" r="12" fill="#62A7FF"/>
+</svg>

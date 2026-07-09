@@ -1,0 +1,106 @@
+---
+import {
+  Blocks,
+  Bot,
+  Boxes,
+  BrainCircuit,
+  Braces,
+  ChartNoAxesColumn,
+  ClipboardCheck,
+  Cloud,
+  CloudCog,
+  CodeXml,
+  Container,
+  Cpu,
+  Database,
+  Flame,
+  GitBranch,
+  Image,
+  Layers,
+  MonitorCog,
+  Network,
+  PackageCheck,
+  Route,
+  Send,
+  Server,
+  Table,
+  Terminal,
+  Workflow,
+  Zap,
+} from "@lucide/astro";
+import SectionHeading from "./SectionHeading.astro";
+
+const top = [
+  ["Python", Terminal],
+  ["JavaScript", Braces],
+  ["TypeScript", CodeXml],
+  ["Go", CodeXml],
+  ["C", CodeXml],
+  ["C++", CodeXml],
+  ["Mojo", Cpu],
+  ["React", Blocks],
+  ["Astro", Zap],
+  ["Bun", Flame],
+  ["PostgreSQL", Database],
+  ["FastAPI", Server],
+  ["PyTorch", BrainCircuit],
+  ["TensorFlow", BrainCircuit],
+  ["NumPy", ChartNoAxesColumn],
+  ["Pandas", Table],
+  ["OpenCV", Image],
+];
+
+const bottom = [
+  ["LangChain", Route],
+  ["LlamaIndex", Network],
+  ["OpenAI", Bot],
+  ["CUDA", MonitorCog],
+  ["Ollama", Bot],
+  ["Qdrant", Database],
+  ["Redis", Database],
+  ["Docker", Container],
+  ["Linux", Terminal],
+  ["Git", GitBranch],
+  ["GitHub Actions", GitBranch],
+  ["Jira", ClipboardCheck],
+  ["Postman", Send],
+  ["AWS", Cloud],
+  ["GCP", CloudCog],
+  ["MLflow", Workflow],
+  ["Ray", Boxes],
+  ["OpenShift", PackageCheck],
+  ["Tailwind", Layers],
+  ["Framer Motion", Workflow],
+];
+---
+
+<section class="section-tight overflow-hidden">
+  <div class="container">
+    <SectionHeading
+      label="Skills"
+      title="Tools for building practical AI software"
+      description="A compact stack across product engineering, AI infrastructure, systems, and deployment."
+    />
+  </div>
+  <div class="space-y-4 fade-up">
+    {
+      [top, bottom].map((row, index) => (
+        <div class="group relative flex overflow-hidden">
+          <div
+            class:list={[
+              "flex min-w-max gap-4 pr-4 group-hover:[animation-play-state:paused]",
+              index === 0 ? "animate-[marquee-left_32s_linear_infinite]" : "animate-[marquee-right_34s_linear_infinite]",
+            ]}
+          >
+            {[...row, ...row].map(([skill, Icon]) => (
+              <span class="inline-flex h-12 items-center gap-2 rounded-full border border-[color:var(--border)] bg-[color:var(--card)] px-5 text-[15px] font-semibold text-[color:var(--text-secondary)]">
+                <Icon size={17} stroke-width={1.75} />
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

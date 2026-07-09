@@ -1,0 +1,86 @@
+---
+import { ExternalLink, GitBranch } from "@lucide/astro";
+import Button from "./Button.astro";
+import SectionHeading from "./SectionHeading.astro";
+import StatusBadge from "./StatusBadge.astro";
+import Tag from "./Tag.astro";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  featured: boolean;
+  status: string;
+  tags: string[];
+  github: string;
+  demo: string;
+  blog: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <SectionHeading
+      label="Selected Work"
+      title="Featured Projects"
+      description="Three representative projects across agents, retrieval, inference tooling, and production engineering."
+    />
+    <div class="space-y-10">
+      {
+        projects.slice(0, 3).map((project, index) => (
+          <article class="surface card-hover fade-up overflow-hidden rounded-[24px] p-4 md:p-6 lg:p-8">
+            <div class:list={["grid items-center gap-8 lg:grid-cols-2", index % 2 === 1 && "lg:[&>div:first-child]:order-2"]}>
+              <div class="overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-black/20">
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  width="960"
+                  height="540"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  class="aspect-video w-full object-cover transition duration-300 hover:scale-[1.03]"
+                />
+              </div>
+              <div class="p-2 md:p-4">
+                <div class="mb-5 flex flex-wrap items-center gap-3">
+                  <StatusBadge status={project.status} />
+                </div>
+                <h3 class="font-display text-3xl font-extrabold leading-tight tracking-[0] md:text-4xl">{project.title}</h3>
+                <p class="mt-5 line-clamp-3 text-lg leading-8 text-[color:var(--text-secondary)]">{project.description}</p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => <Tag label={tag} />)}
+                </div>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                  >
+                    <GitBranch size={18} stroke-width={1.75} />
+                    GitHub
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                  >
+                    <ExternalLink size={18} stroke-width={1.75} />
+                    Live Demo
+                  </a>
+                  <Button href={project.blog} label="Read More" variant="ghost" />
+                </div>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

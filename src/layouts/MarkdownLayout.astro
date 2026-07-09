@@ -1,0 +1,47 @@
+---
+import Layout from "./Layout.astro";
+import Tag from "@components/Tag.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} - Ali Aslanbayli`} description={frontmatter.excerpt}>
+  <article class="container section-tight">
+    <a
+      href="/blog/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mb-10 inline-flex text-[15px] font-semibold text-[color:var(--text-secondary)] transition hover:text-[color:var(--text)]"
+    >
+      Back to blog
+    </a>
+    <header class="mb-12 max-w-[820px]">
+      <div class="mb-5 flex flex-wrap items-center gap-3 text-[15px] text-[color:var(--muted)]">
+        <time datetime={frontmatter.date}>{new Date(frontmatter.date).toLocaleDateString("en", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        })}</time>
+        <span aria-hidden="true">/</span>
+        <span>{frontmatter.readTime}</span>
+      </div>
+      <h1 class="font-display mb-6 text-[clamp(40px,7vw,72px)] font-extrabold leading-[.98] tracking-[0]">
+        {frontmatter.title}
+      </h1>
+      <p class="max-w-[650px] text-xl leading-8 text-[color:var(--text-secondary)]">{frontmatter.excerpt}</p>
+      <div class="mt-8 flex flex-wrap gap-2">
+        {frontmatter.tags?.map((tag: string) => <Tag label={tag} />)}
+      </div>
+    </header>
+    {frontmatter.cover && (
+      <img
+        src={frontmatter.cover}
+        alt=""
+        class="mb-14 aspect-[16/9] w-full rounded-[24px] border border-[color:var(--border)] object-cover"
+      />
+    )}
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</Layout>

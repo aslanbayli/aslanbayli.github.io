@@ -1,0 +1,33 @@
+---
+import { ArrowRight } from "@lucide/astro";
+
+interface Props {
+  href: string;
+  label: string;
+  variant?: "primary" | "secondary" | "ghost";
+  icon?: boolean;
+}
+
+const { href, label, variant = "primary", icon = true } = Astro.props;
+const opensNewTab = !href.startsWith("#");
+const base =
+  "group inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl px-5 py-3 text-base font-semibold transition duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--orange)]";
+const styles = {
+  primary:
+    "bg-[image:var(--hero-gradient)] text-white shadow-[0_0_42px_rgba(255,107,61,.18)] hover:brightness-110",
+  secondary:
+    "border border-[color:var(--border)] bg-white/[.02] text-[color:var(--text)] hover:border-[color:var(--border-hover)] hover:bg-white/[.05]",
+  ghost:
+    "border border-[color:var(--border)] bg-transparent text-[color:var(--text-secondary)] hover:border-[color:var(--border-hover)] hover:bg-white/[.04] hover:text-[color:var(--text)]",
+};
+---
+
+<a
+  href={href}
+  target={opensNewTab ? "_blank" : undefined}
+  rel={opensNewTab ? "noopener noreferrer" : undefined}
+  class:list={[base, styles[variant]]}
+>
+  <span>{label}</span>
+  {icon && <ArrowRight size={18} stroke-width={1.75} class="transition group-hover:translate-x-0.5" />}
+</a>

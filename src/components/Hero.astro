@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+import HeroPortrait from "./HeroPortrait.astro";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<section class="container flex min-h-[820px] items-center pt-24 md:min-h-screen">
+  <div class="grid w-full items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
+    <div class="order-2 max-w-[760px] fade-up lg:order-1">
+      <p class="mb-5 text-sm font-bold uppercase tracking-[.18em] text-[color:var(--orange)]">AI Engineer</p>
+      <h1
+        class="font-display text-gradient text-[44px] font-extrabold leading-[.95] tracking-[0] md:text-[64px] xl:text-[80px]"
+      >
+        Building AI systems, developer tools, and modern software.
+      </h1>
+      <p class="mt-8 max-w-[650px] text-lg leading-8 text-[color:var(--text-secondary)] md:text-xl md:leading-9">
+        Computer Engineering graduate from NYU building AI agents, retrieval systems, developer tools, and
+        open-source software.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <Button href="#projects" label="View Projects" />
+        <Button href="/blog/" label="Read Blog" variant="secondary" />
+      </div>
+      <div class="mt-8">
+        <SocialLinks />
+      </div>
+    </div>
+    <div class="order-1 fade-up lg:order-2">
+      <HeroPortrait />
+    </div>
+  </div>
+</section>

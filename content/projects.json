@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Pelmen Coding Agent",
+    "description": "A TypeScript coding agent CLI built with Bun, OpenRouter, Commander, and Ink/React, featuring streaming tool calls, surgical edits, session restore, model switching, context tracking, summarization, and reusable markdown skills.",
+    "image": "/images/pelmen-agent-ezgif.com-video-to-gif-converter.gif",
+    "featured": true,
+    "status": "In Progress",
+    "tags": ["TypeScript", "Bun", "AI Agents", "OpenRouter", "Ink"],
+    "github": "https://github.com/aslanbayli/pelmen",
+    "demo": "https://github.com/aslanbayli/pelmen",
+    "blog": "/blog/building-agent-workflows/"
+  },
+  {
+    "title": "FireLens",
+    "description": "A local-first hybrid code retrieval engine that indexes repositories into SQLite with AST symbols, semantic chunks, embeddings, file metadata, incremental reindexing, exact/fuzzy/semantic search, MCP-compatible output, Streamlit UI, and Mojo-accelerated ranking kernels.",
+    "image": "/images/project-firelens.svg",
+    "featured": true,
+    "status": "Research",
+    "tags": ["Python", "SQLite", "Mojo", "Embeddings", "Streamlit"],
+    "github": "https://github.com/aslanbayli/firelens",
+    "demo": "https://github.com/aslanbayli/firelens",
+    "blog": "/blog/measuring-retrieval-quality/"
+  },
+  {
+    "title": "MeshNet",
+    "description": "A heterogeneous Graph Neural Network built with PyTorch Geometric to identify devices in mesh networks using custom Device, Event, and Service nodes, hyperparameter sweeping, and weighted loss functions to reach 90% accuracy.",
+    "image": "/images/project-meshnet.svg",
+    "featured": true,
+    "status": "Open Source",
+    "tags": ["PyTorch", "PyTorch Geometric", "GNN", "Python", "ML"],
+    "github": "https://github.com/aslanbayli/MeshNet",
+    "demo": "https://github.com/aslanbayli/MeshNet",
+    "blog": "/blog/designing-ai-engineering-tools/"
+  }
+]

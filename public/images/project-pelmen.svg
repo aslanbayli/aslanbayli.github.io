@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Pelmen project preview</title>
+  <desc id="desc">Agent workflow interface preview with connected steps.</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#FF6B3D"/><stop offset=".6" stop-color="#C56CFF"/><stop offset="1" stop-color="#62A7FF"/></linearGradient></defs>
+  <rect width="960" height="540" fill="#090B12"/>
+  <circle cx="110" cy="80" r="210" fill="#FF6B3D" opacity=".18"/>
+  <circle cx="820" cy="420" r="260" fill="#C56CFF" opacity=".16"/>
+  <rect x="72" y="60" width="816" height="420" rx="28" fill="#10141D" stroke="rgba(255,255,255,.1)"/>
+  <rect x="112" y="104" width="196" height="332" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="350" y="104" width="220" height="130" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="350" y="306" width="220" height="130" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="614" y="204" width="220" height="130" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <path d="M308 270h42M570 169c65 0 44 100 44 100M570 371c64 0 46-102 44-102" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <rect x="146" y="140" width="92" height="12" rx="6" fill="#F7F8FB"/>
+  <rect x="146" y="180" width="126" height="10" rx="5" fill="#A5ADBC" opacity=".45"/>
+  <rect x="382" y="142" width="112" height="12" rx="6" fill="#F7F8FB"/>
+  <rect x="382" y="344" width="92" height="12" rx="6" fill="#F7F8FB"/>
+  <rect x="646" y="242" width="104" height="12" rx="6" fill="#F7F8FB"/>
+  <circle cx="790" cy="269" r="18" fill="url(#g)"/>
+</svg>

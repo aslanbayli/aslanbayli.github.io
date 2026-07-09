@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">MeshNet project preview</title>
+  <desc id="desc">Graph neural network visualization for mesh network device identification.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop stop-color="#62A7FF"/>
+      <stop offset=".5" stop-color="#C56CFF"/>
+      <stop offset="1" stop-color="#FF6B3D"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="#090B12"/>
+  <circle cx="770" cy="130" r="220" fill="#C56CFF" opacity=".14"/>
+  <circle cx="160" cy="420" r="230" fill="#62A7FF" opacity=".13"/>
+  <rect x="72" y="60" width="816" height="420" rx="28" fill="#10141D" stroke="rgba(255,255,255,.1)"/>
+  <path d="M252 182 420 138 602 190 710 330 526 390 338 342 252 182Z" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="4"/>
+  <path d="M420 138 526 390M602 190 338 342M252 182 710 330M420 138 338 342M602 190 526 390" fill="none" stroke="url(#g)" stroke-width="3" opacity=".65"/>
+  <g stroke="#090B12" stroke-width="6">
+    <circle cx="252" cy="182" r="34" fill="#62A7FF"/>
+    <circle cx="420" cy="138" r="34" fill="#FF6B3D"/>
+    <circle cx="602" cy="190" r="34" fill="#C56CFF"/>
+    <circle cx="710" cy="330" r="34" fill="#4ADE80"/>
+    <circle cx="526" cy="390" r="34" fill="#62A7FF"/>
+    <circle cx="338" cy="342" r="34" fill="#FF6B3D"/>
+  </g>
+  <rect x="124" y="104" width="168" height="12" rx="6" fill="#F7F8FB" opacity=".86"/>
+  <rect x="124" y="132" width="230" height="9" rx="4.5" fill="#A5ADBC" opacity=".34"/>
+  <rect x="642" y="104" width="168" height="42" rx="21" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="666" y="119" width="84" height="12" rx="6" fill="#4ADE80"/>
+  <text x="124" y="432" fill="#A5ADBC" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600">90% accuracy</text>
+</svg>

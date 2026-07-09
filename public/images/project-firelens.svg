@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">FireLens project preview</title>
+  <desc id="desc">Hybrid code retrieval interface with indexed symbols, semantic chunks, and ranked results.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop stop-color="#FF6B3D"/>
+      <stop offset=".55" stop-color="#C56CFF"/>
+      <stop offset="1" stop-color="#62A7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="#090B12"/>
+  <circle cx="170" cy="120" r="230" fill="#FF6B3D" opacity=".15"/>
+  <circle cx="780" cy="410" r="250" fill="#62A7FF" opacity=".13"/>
+  <rect x="70" y="58" width="820" height="424" rx="28" fill="#10141D" stroke="rgba(255,255,255,.1)"/>
+  <rect x="116" y="110" width="250" height="320" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="410" y="110" width="392" height="86" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="410" y="226" width="392" height="86" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="410" y="342" width="392" height="88" rx="20" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <path d="M158 178h154M158 230h116M158 282h178M158 334h138M158 386h154" stroke="#A5ADBC" stroke-width="10" stroke-linecap="round" opacity=".4"/>
+  <path d="M230 178c48 72 122 118 202 118" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <path d="M230 334c60-58 121-90 202-90" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <rect x="452" y="143" width="170" height="11" rx="5.5" fill="#F7F8FB" opacity=".9"/>
+  <rect x="452" y="259" width="230" height="11" rx="5.5" fill="#F7F8FB" opacity=".9"/>
+  <rect x="452" y="375" width="196" height="11" rx="5.5" fill="#F7F8FB" opacity=".9"/>
+  <rect x="452" y="166" width="286" height="9" rx="4.5" fill="#A5ADBC" opacity=".34"/>
+  <rect x="452" y="282" width="250" height="9" rx="4.5" fill="#A5ADBC" opacity=".34"/>
+  <rect x="452" y="398" width="220" height="9" rx="4.5" fill="#A5ADBC" opacity=".34"/>
+  <circle cx="762" cy="153" r="14" fill="#FF6B3D"/>
+  <circle cx="762" cy="269" r="14" fill="#C56CFF"/>
+  <circle cx="762" cy="386" r="14" fill="#62A7FF"/>
+</svg>

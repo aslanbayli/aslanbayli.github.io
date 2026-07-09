@@ -1,0 +1,80 @@
+---
+import { ExternalLink, GitBranch } from "@lucide/astro";
+import SectionHeading from "./SectionHeading.astro";
+import StatusBadge from "./StatusBadge.astro";
+import Tag from "./Tag.astro";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  featured: boolean;
+  status: string;
+  tags: string[];
+  github: string;
+  demo: string;
+  blog: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="section-tight">
+  <div class="container">
+    <SectionHeading
+      label="Archive"
+      title="All Projects"
+      description="A broader view of experiments, tools, and engineering systems."
+    />
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {
+        projects.map((project) => (
+          <article class="surface card-hover fade-up flex h-full flex-col overflow-hidden rounded-[24px] p-5">
+            <img
+              src={project.image}
+              alt={`${project.title} project preview`}
+              width="720"
+              height="405"
+              loading="lazy"
+              class="aspect-video w-full rounded-[18px] border border-[color:var(--border)] object-cover"
+            />
+            <div class="flex flex-1 flex-col pt-6">
+              <div class="mb-4">
+                <StatusBadge status={project.status} />
+              </div>
+              <h3 class="font-display text-2xl font-extrabold leading-tight tracking-[0]">{project.title}</h3>
+              <p class="mt-4 line-clamp-3 text-[16px] leading-7 text-[color:var(--text-secondary)]">{project.description}</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {project.tags.slice(0, 4).map((tag) => <Tag label={tag} />)}
+              </div>
+              <div class="mt-auto flex gap-3 pt-7">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.title} GitHub`}
+                  class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                >
+                  <GitBranch size={18} stroke-width={1.75} />
+                </a>
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.title} live demo`}
+                  class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                >
+                  <ExternalLink size={18} stroke-width={1.75} />
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

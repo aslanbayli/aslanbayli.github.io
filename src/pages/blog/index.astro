@@ -1,0 +1,32 @@
+---
+import Layout from "@layouts/Layout.astro";
+import BlogCard from "@components/BlogCard.astro";
+
+const modules = import.meta.glob("../../../content/blog/*.md", { eager: true });
+const posts = Object.entries(modules)
+  .map(([path, mod]: [string, any]) => ({
+    slug: path.split("/").pop()?.replace(".md", "") ?? "",
+    frontmatter: mod.frontmatter,
+  }))
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+---
+
+<Layout
+  title="Blog - Ali Aslanbayli"
+  description="Thoughts on AI, engineering, developer tools, and building modern software."
+>
+  <section class="container section-tight pt-32">
+    <header class="mb-14 max-w-[820px] fade-up">
+      <p class="mb-5 text-sm font-bold uppercase tracking-[.18em] text-[color:var(--orange)]">Blog</p>
+      <h1 class="font-display text-[clamp(44px,8vw,80px)] font-extrabold leading-[.95] tracking-[0]">
+        Thoughts on AI, Engineering, and Building.
+      </h1>
+      <p class="mt-8 max-w-[650px] text-lg leading-8 text-[color:var(--text-secondary)] md:text-xl md:leading-9">
+        Notes on AI systems, retrieval, developer tooling, and the engineering tradeoffs behind useful products.
+      </p>
+    </header>
+    <div class="space-y-5">
+      {posts.map((post) => <BlogCard post={post} />)}
+    </div>
+  </section>
+</Layout>

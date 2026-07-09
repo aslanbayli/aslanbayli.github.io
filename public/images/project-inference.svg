@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Inference Console project preview</title>
+  <desc id="desc">Model latency and prompt comparison dashboard preview.</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#FF6B3D"/><stop offset=".45" stop-color="#C56CFF"/><stop offset="1" stop-color="#62A7FF"/></linearGradient></defs>
+  <rect width="960" height="540" fill="#090B12"/>
+  <rect x="66" y="62" width="828" height="416" rx="28" fill="#10141D" stroke="rgba(255,255,255,.1)"/>
+  <rect x="114" y="112" width="214" height="318" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="370" y="112" width="214" height="318" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="626" y="112" width="214" height="318" rx="22" fill="#121824" stroke="rgba(255,255,255,.08)"/>
+  <rect x="150" y="154" width="92" height="12" rx="6" fill="#F7F8FB"/>
+  <rect x="406" y="154" width="92" height="12" rx="6" fill="#F7F8FB"/>
+  <rect x="662" y="154" width="92" height="12" rx="6" fill="#F7F8FB"/>
+  <path d="M154 348h130M410 348h130M666 348h130" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+  <path d="M154 304c26-42 42-30 66-76 20-38 36-24 62-8" fill="none" stroke="#FF6B3D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M410 292c26-30 42-20 66-68 20-42 36-28 62-18" fill="none" stroke="#C56CFF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M666 318c26-52 42-38 66-72 20-30 36-18 62-10" fill="none" stroke="#62A7FF" stroke-width="6" stroke-linecap="round"/>
+  <rect x="154" y="382" width="128" height="12" rx="6" fill="url(#g)" opacity=".75"/>
+  <rect x="410" y="382" width="92" height="12" rx="6" fill="url(#g)" opacity=".75"/>
+  <rect x="666" y="382" width="150" height="12" rx="6" fill="url(#g)" opacity=".75"/>
+</svg>

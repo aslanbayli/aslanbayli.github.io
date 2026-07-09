@@ -1,0 +1,40 @@
+---
+const links = [
+  { label: "Email", href: "mailto:aa12947@nyu.edu" },
+  { label: "GitHub", href: "https://github.com/aslanbayli" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/aslanbayli/" },
+  { label: "Resume", href: "/resume.pdf" },
+];
+---
+
+<footer class="border-t border-[color:var(--border)]">
+  <div class="container py-20">
+    <div class="flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
+      <div>
+        <h2 class="font-display max-w-[720px] text-5xl font-extrabold leading-[1.02] tracking-[0] md:text-6xl">
+          Let's build something great.
+        </h2>
+      </div>
+      <nav aria-label="Footer links" class="flex flex-wrap gap-x-6 gap-y-3 text-base font-semibold">
+        {
+          links.map(({ label, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[color:var(--text-secondary)] transition hover:text-[color:var(--text)]"
+            >
+              {label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+    <div
+      class="mt-16 flex flex-col justify-between gap-4 border-t border-[color:var(--border)] pt-8 text-sm text-[color:var(--muted)] md:flex-row"
+    >
+      <p>© {new Date().getFullYear()} Ali Aslanbayli. Built with Astro.</p>
+      <p>Hosted on GitHub Pages.</p>
+    </div>
+  </div>
+</footer>

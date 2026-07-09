@@ -1,0 +1,59 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+const focus = [
+  { label: "Building", value: "Pelmen" },
+  { label: "Learning", value: "Mojo" },
+  { label: "Interested In", value: "Inference" },
+  { label: "Exploring", value: "Compilers" },
+  { label: "Using", value: "Developer Tools" },
+];
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="grid gap-10 lg:grid-cols-[1fr_.82fr]">
+      <div>
+        <SectionHeading
+          label="About"
+          title="About Me"
+          description="I like building software where product taste and systems thinking meet."
+        />
+        <div class="fade-up max-w-[650px] space-y-6 text-lg leading-8 text-[color:var(--text-secondary)]">
+          <p>
+            I am a Computer Engineering graduate from NYU focused on AI systems, retrieval workflows, and developer
+            tools that make complex software easier to reason about.
+          </p>
+          <p>
+            My work tends to sit close to the engineering surface: model orchestration, data flow, observability,
+            interfaces, and the infrastructure needed to make AI products reliable.
+          </p>
+          <p>
+            I care about clean abstractions, fast iteration loops, and interfaces that help engineers inspect what
+            their systems are doing.
+          </p>
+        </div>
+      </div>
+      <div class="surface fade-up rounded-[24px] p-6 md:p-8">
+        <img
+          src="/images/about-card.svg"
+          alt="Abstract engineering workspace visualization"
+          width="720"
+          height="520"
+          class="mb-6 aspect-[16/11] w-full rounded-[18px] object-cover"
+          loading="lazy"
+        />
+        <div class="grid gap-3 sm:grid-cols-2">
+          {
+            focus.map((item) => (
+              <div class="rounded-[18px] border border-[color:var(--border)] bg-white/[.03] p-4">
+                <p class="text-sm font-semibold text-[color:var(--muted)]">{item.label}</p>
+                <p class="mt-1 font-display text-xl font-bold tracking-[0]">{item.value}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

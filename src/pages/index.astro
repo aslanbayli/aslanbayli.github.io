@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/Layout.astro";
+import AboutSection from "@components/AboutSection.astro";
+import FeaturedProjects from "@components/FeaturedProjects.astro";
+import Hero from "@components/Hero.astro";
+import ProjectsGrid from "@components/ProjectsGrid.astro";
+import SkillsCarousel from "@components/SkillsCarousel.astro";
+import projects from "../../content/projects.json";
+
+const featured = projects.filter((project) => project.featured);
+const sortedProjects = [...projects].sort((a, b) => Number(b.featured) - Number(a.featured));
+---
+
+<Layout>
+  <Hero />
+  <AboutSection />
+  <SkillsCarousel />
+  <FeaturedProjects projects={featured} />
+  <!-- <ProjectsGrid projects={sortedProjects} /> -->
+</Layout>

@@ -1,0 +1,32 @@
+---
+import { GitBranch, BriefcaseBusiness, FileText, Mail } from "@lucide/astro";
+
+interface Props {
+  showEmail?: boolean;
+}
+
+const { showEmail = false } = Astro.props;
+const links = [
+  { label: "GitHub", href: "https://github.com/aslanbayli", Icon: GitBranch },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/aslanbayli/", Icon: BriefcaseBusiness },
+  { label: "Resume", href: "/resume.pdf", Icon: FileText },
+  ...(showEmail ? [{ label: "Email", href: "mailto:aa12947@nyu.edu", Icon: Mail }] : []),
+];
+---
+
+<div class="flex flex-wrap gap-3">
+  {
+    links.map(({ label, href, Icon }) => (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        class="inline-flex h-11 items-center gap-2 rounded-full border border-[color:var(--border)] bg-white/[.02] px-4 text-[15px] font-semibold text-[color:var(--text-secondary)] transition hover:border-[color:var(--border-hover)] hover:bg-white/[.05] hover:text-[color:var(--text)]"
+      >
+        <Icon size={17} stroke-width={1.75} />
+        <span>{label}</span>
+      </a>
+    ))
+  }
+</div>

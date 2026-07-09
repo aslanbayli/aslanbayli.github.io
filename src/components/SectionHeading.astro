@@ -1,0 +1,15 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+}
+
+const { label, title, description } = Astro.props;
+---
+
+<div class="mb-14 max-w-[650px] fade-up">
+  {label && <p class="mb-4 text-sm font-bold uppercase tracking-[.16em] text-[color:var(--orange)]">{label}</p>}
+  <h2 class="font-display text-4xl font-extrabold leading-tight tracking-[0] md:text-5xl">{title}</h2>
+  {description && <p class="mt-5 text-lg leading-8 text-[color:var(--text-secondary)]">{description}</p>}
+</div>

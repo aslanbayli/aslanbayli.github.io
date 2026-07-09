@@ -1,0 +1,63 @@
+---
+import { Menu } from "@lucide/astro";
+
+const navItems = [
+  { label: "Projects", href: "/#projects" },
+  { label: "Blog", href: "/blog/" },
+  { label: "GitHub", href: "https://github.com/aslanbayli" },
+  { label: "Resume", href: "/resume.pdf" },
+];
+
+const opensNewTab = (href: string) => !href.startsWith("#");
+---
+
+<header
+  data-navbar
+  class="fixed left-0 top-0 z-50 flex h-20 w-full items-center transition duration-300 [&.is-scrolled]:border-b [&.is-scrolled]:border-white/[.06] [&.is-scrolled]:bg-[rgba(9,11,18,.65)] [&.is-scrolled]:backdrop-blur-[18px]"
+>
+  <nav class="container flex items-center justify-between" aria-label="Primary navigation">
+    <a href="/" class="font-display text-lg font-extrabold tracking-[0]">Ali Aslanbayli</a>
+    <div class="hidden items-center gap-8 md:flex">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            target={opensNewTab(item.href) ? "_blank" : undefined}
+            rel={opensNewTab(item.href) ? "noopener noreferrer" : undefined}
+            class="text-[15px] font-semibold text-[color:var(--text-secondary)] transition hover:text-[color:var(--text)]"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+    <button
+      data-mobile-toggle
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--border)] bg-white/[.03] md:hidden"
+    >
+      <Menu size={20} stroke-width={1.75} />
+    </button>
+  </nav>
+  <div
+    data-mobile-menu
+    class="pointer-events-none fixed right-0 top-0 h-screen w-full translate-x-full bg-[rgba(9,11,18,.88)] p-6 pt-24 opacity-0 backdrop-blur-[18px] transition duration-300 md:hidden [&.is-open]:pointer-events-auto [&.is-open]:translate-x-0 [&.is-open]:opacity-100"
+  >
+    <div class="surface ml-auto flex max-w-sm flex-col gap-2 rounded-[24px] p-4">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            target={opensNewTab(item.href) ? "_blank" : undefined}
+            rel={opensNewTab(item.href) ? "noopener noreferrer" : undefined}
+            class="rounded-2xl px-4 py-4 text-lg font-semibold transition hover:bg-white/[.05]"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</header>

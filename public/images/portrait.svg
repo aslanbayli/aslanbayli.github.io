@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">A polished abstract portrait placeholder with warm and purple lighting.</desc>
+  <defs>
+    <radialGradient id="bg" cx="32%" cy="20%" r="74%">
+      <stop offset="0" stop-color="#FF6B3D"/>
+      <stop offset=".52" stop-color="#181F2B"/>
+      <stop offset="1" stop-color="#090B12"/>
+    </radialGradient>
+    <linearGradient id="glow" x1="95" x2="545" y1="94" y2="570">
+      <stop stop-color="#FF6B3D"/>
+      <stop offset=".55" stop-color="#C56CFF"/>
+      <stop offset="1" stop-color="#62A7FF"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <circle cx="462" cy="142" r="168" fill="#C56CFF" opacity=".28" filter="url(#blur)"/>
+  <circle cx="170" cy="474" r="150" fill="#FF6B3D" opacity=".2" filter="url(#blur)"/>
+  <circle cx="320" cy="280" r="122" fill="#10141D" stroke="url(#glow)" stroke-width="6"/>
+  <path fill="#F7F8FB" opacity=".9" d="M202 552c14-78 58-127 118-127s104 49 118 127H202Z"/>
+  <circle cx="320" cy="264" r="84" fill="#F7F8FB"/>
+  <path fill="#121824" d="M228 261c12-66 43-103 94-103 48 0 83 34 91 91-43-8-88-22-132-46-21 16-38 35-53 58Z"/>
+  <path fill="#090B12" opacity=".42" d="M232 532c21-51 51-77 88-77 39 0 69 26 90 77H232Z"/>
+</svg>
