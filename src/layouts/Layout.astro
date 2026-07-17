@@ -67,11 +67,6 @@ const {
         });
       });
 
-      document.querySelectorAll('a[href]:not([href^="#"])').forEach((link) => {
-        link.setAttribute("target", "_blank");
-        link.setAttribute("rel", "noopener noreferrer");
-      });
-
       if (!reduceMotion && "IntersectionObserver" in window) {
         const observer = new IntersectionObserver(
           (entries) => {

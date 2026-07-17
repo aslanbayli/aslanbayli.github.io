@@ -22,6 +22,7 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+const opensNewTab = (href: string) => /^https?:\/\//.test(href);
 ---
 
 <section id="projects" class="section">
@@ -56,25 +57,29 @@ const { projects } = Astro.props;
                   {project.tags.map((tag) => <Tag label={tag} />)}
                 </div>
                 <div class="mt-8 flex flex-wrap gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
-                  >
-                    <GitBranch size={18} stroke-width={1.75} />
-                    GitHub
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
-                  >
-                    <ExternalLink size={18} stroke-width={1.75} />
-                    Live Demo
-                  </a>
-                  <Button href={project.blog} label="Read More" variant="ghost" />
+                  {project.github?.trim() && (
+                    <a
+                      href={project.github}
+                      target={opensNewTab(project.github) ? "_blank" : undefined}
+                      rel={opensNewTab(project.github) ? "noopener noreferrer" : undefined}
+                      class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                    >
+                      <GitBranch size={18} stroke-width={1.75} />
+                      GitHub
+                    </a>
+                  )}
+                  {project.demo?.trim() && (
+                    <a
+                      href={project.demo}
+                      target={opensNewTab(project.demo) ? "_blank" : undefined}
+                      rel={opensNewTab(project.demo) ? "noopener noreferrer" : undefined}
+                      class="inline-flex h-12 items-center gap-2 rounded-2xl border border-[color:var(--border)] px-4 text-base font-semibold transition hover:border-[color:var(--border-hover)] hover:bg-white/[.04]"
+                    >
+                      <ExternalLink size={18} stroke-width={1.75} />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.blog?.trim() && <Button href={project.blog} label="Read More" variant="ghost" />}
                 </div>
               </div>
             </div>

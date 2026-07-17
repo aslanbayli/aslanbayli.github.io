@@ -2,13 +2,11 @@
 import { Menu } from "@lucide/astro";
 
 const navItems = [
-  { label: "Projects", href: "/#projects" },
-  { label: "Blog", href: "/blog/" },
-  { label: "GitHub", href: "https://github.com/aslanbayli" },
-  { label: "Resume", href: "/resume.pdf" },
+  { label: "Projects", href: "/#projects", opensNewTab: false },
+  { label: "Blog", href: "/blog/", opensNewTab: false },
+  { label: "GitHub", href: "https://github.com/aslanbayli", opensNewTab: true },
+  { label: "Resume", href: "/resume.pdf", opensNewTab: true },
 ];
-
-const opensNewTab = (href: string) => !href.startsWith("#");
 ---
 
 <header
@@ -22,8 +20,8 @@ const opensNewTab = (href: string) => !href.startsWith("#");
         navItems.map((item) => (
           <a
             href={item.href}
-            target={opensNewTab(item.href) ? "_blank" : undefined}
-            rel={opensNewTab(item.href) ? "noopener noreferrer" : undefined}
+            target={item.opensNewTab ? "_blank" : undefined}
+            rel={item.opensNewTab ? "noopener noreferrer" : undefined}
             class="text-[15px] font-semibold text-[color:var(--text-secondary)] transition hover:text-[color:var(--text)]"
           >
             {item.label}
@@ -50,8 +48,8 @@ const opensNewTab = (href: string) => !href.startsWith("#");
         navItems.map((item) => (
           <a
             href={item.href}
-            target={opensNewTab(item.href) ? "_blank" : undefined}
-            rel={opensNewTab(item.href) ? "noopener noreferrer" : undefined}
+            target={item.opensNewTab ? "_blank" : undefined}
+            rel={item.opensNewTab ? "noopener noreferrer" : undefined}
             class="rounded-2xl px-4 py-4 text-lg font-semibold transition hover:bg-white/[.05]"
           >
             {item.label}
