@@ -165,6 +165,7 @@ select {
 .prose {
   max-width: 760px;
   color: var(--text-secondary);
+  text-align: justify;
 }
 
 .prose h1,
@@ -179,6 +180,7 @@ select {
     sans-serif;
   letter-spacing: 0;
   line-height: 1.1;
+  text-align: center;
 }
 
 .prose h1 {
@@ -200,6 +202,17 @@ select {
 .prose ul,
 .prose ol {
   margin: 0 0 22px;
+}
+
+.prose ul,
+.prose ol,
+.prose pre {
+  text-align: left;
+}
+
+.prose ol {
+  list-style: decimal;
+  padding-inline-start: 1.5em;
 }
 
 .prose a {

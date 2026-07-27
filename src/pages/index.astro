@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import AboutSection from "@components/AboutSection.astro";
+import ExperienceSection from "@components/ExperienceSection.astro";
 import FeaturedProjects from "@components/FeaturedProjects.astro";
 import Hero from "@components/Hero.astro";
 import ProjectsGrid from "@components/ProjectsGrid.astro";
@@ -15,6 +16,7 @@ const sortedProjects = [...projects].sort((a, b) => Number(b.featured) - Number(
   <Hero />
   <AboutSection />
   <SkillsCarousel />
+  <ExperienceSection />
   <FeaturedProjects projects={featured} />
-  <!-- <ProjectsGrid projects={sortedProjects} /> -->
+  <ProjectsGrid projects={sortedProjects} />
 </Layout>
