@@ -1,0 +1,665 @@
+{
+  "generatedAt": "2026-07-27T20:36:57.175Z",
+  "notes": [
+    {
+      "slug": "profile",
+      "type": "profile",
+      "title": "Ali Aslanbayli",
+      "summary": "AI engineer building agents, retrieval systems, developer tools, and reliable information workflows.",
+      "tags": [
+        "AI Engineering",
+        "AI Agents",
+        "Retrieval",
+        "Developer Tools"
+      ],
+      "id": "ea0fcc2f80a4",
+      "path": "profile.md",
+      "body": "I am an AI engineer focused on making complex information useful. My work spans multimodal document understanding, agentic workflows, retrieval-augmented generation, evaluation, and developer tooling.\n\nRelated topics: [[AI Agents]], [[Retrieval]], [[Developer Tools]].",
+      "sections": [
+        {
+          "id": "c69b008be049c6f2",
+          "title": "Ali Aslanbayli",
+          "text": "I am an AI engineer focused on making complex information useful. My work spans multimodal document understanding, agentic workflows, retrieval-augmented generation, evaluation, and developer tooling.\n\nRelated topics: [[AI Agents]], [[Retrieval]], [[Developer Tools]].",
+          "url": "/#about#c69b008be049c6f2"
+        }
+      ],
+      "url": "/#about"
+    },
+    {
+      "slug": "experience",
+      "type": "experience",
+      "title": "Professional Experience",
+      "summary": "Experience building AI systems, retrieval workflows, and developer tools.",
+      "tags": [
+        "AI Engineering",
+        "RAG",
+        "Document Intelligence"
+      ],
+      "id": "d991fe14f51a",
+      "path": "experience.md",
+      "body": "## AI Engineer\nProvidge Consulting | New York, NY | July 2026 - Present\n\n- Engineered multimodal document-understanding systems that extract and reason over complex PDFs containing tables, charts, forms, and scanned images using vision-language models and OCR pipelines.\n- Developed autonomous AI agents that dynamically plan multi-step workflows, select specialized tools, and synthesize information from heterogeneous enterprise data sources.\n- Designed scalable document-processing pipelines with layout analysis, metadata extraction, and asynchronous orchestration for high-throughput enterprise AI applications.\n\n## GenAI Developer\nNYU Research Technology Services | New York, NY | December 2024 - May 2026\n\n- Architected and deployed end-to-end Retrieval-Augmented Generation (RAG) pipelines using OpenWebUI and vector databases, improving model accuracy and reducing hallucinations for domain-specific queries.\n- Engineered real-time Python data-ingestion modules that integrate Google Search APIs, increasing LLM context coverage by 40% and enabling answers to live-event queries.\n- Built a user-facing agentic interface that automates complex data analysis, converting natural language directly into Pandas workflows to accelerate research operations.\n\nRelated topics: [[Retrieval]], [[AI Agents]], [[Document Intelligence]].",
+      "sections": [
+        {
+          "id": "7739a9dcf66c3e77",
+          "title": "AI Engineer",
+          "text": "## AI Engineer\nProvidge Consulting | New York, NY | July 2026 - Present\n\n- Engineered multimodal document-understanding systems that extract and reason over complex PDFs containing tables, charts, forms, and scanned images using vision-language models and OCR pipelines.\n- Developed autonomous AI agents that dynamically plan multi-step workflows, select specialized tools, and synthesize information from heterogeneous enterprise data sources.\n- Designed scalable document-processing pipelines with layout analysis, metadata extraction, and asynchronous orchestration for high-throughput enterprise AI applications.",
+          "url": "/#experience#7739a9dcf66c3e77"
+        },
+        {
+          "id": "cfbb7961c4897170",
+          "title": "GenAI Developer",
+          "text": "## GenAI Developer\nNYU Research Technology Services | New York, NY | December 2024 - May 2026\n\n- Architected and deployed end-to-end Retrieval-Augmented Generation (RAG) pipelines using OpenWebUI and vector databases, improving model accuracy and reducing hallucinations for domain-specific queries.\n- Engineered real-time Python data-ingestion modules that integrate Google Search APIs, increasing LLM context coverage by 40% and enabling answers to live-event queries.\n- Built a user-facing agentic interface that automates complex data analysis, converting natural language directly into Pandas workflows to accelerate research operations.\n\nRelated topics: [[Retrieval]], [[AI Agents]], [[Document Intelligence]].",
+          "url": "/#experience#cfbb7961c4897170"
+        }
+      ],
+      "url": "/#experience"
+    },
+    {
+      "slug": "skills",
+      "type": "skills",
+      "title": "Skills",
+      "summary": "Technical skills across AI systems, retrieval, agents, and software engineering.",
+      "tags": [
+        "Python",
+        "TypeScript",
+        "RAG",
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "id": "89f5641a4500",
+      "path": "skills.md",
+      "body": "- AI systems: multimodal document understanding, OCR, vision-language models, agent orchestration.\n- Retrieval: RAG pipelines, embeddings, vector databases, evaluation, semantic search.\n- Engineering: Python, TypeScript, Bun, SQLite, PyTorch, PyTorch Geometric, Streamlit, Mojo.\n- Product thinking: observability, verification, clear interfaces, and reliable workflows.",
+      "sections": [
+        {
+          "id": "d20f8b2f1e07ffe3",
+          "title": "Skills",
+          "text": "- AI systems: multimodal document understanding, OCR, vision-language models, agent orchestration.\n- Retrieval: RAG pipelines, embeddings, vector databases, evaluation, semantic search.\n- Engineering: Python, TypeScript, Bun, SQLite, PyTorch, PyTorch Geometric, Streamlit, Mojo.\n- Product thinking: observability, verification, clear interfaces, and reliable workflows.",
+          "url": "/#knowledge#d20f8b2f1e07ffe3"
+        }
+      ],
+      "url": "/#knowledge"
+    },
+    {
+      "slug": "pelmen",
+      "summary": "A TypeScript coding agent CLI with streaming tools, session restore, model switching, and context management.",
+      "tags": [
+        "TypeScript",
+        "Bun",
+        "AI Agents",
+        "OpenRouter",
+        "Ink"
+      ],
+      "image": "/images/pelmen-agent-ezgif.com-video-to-gif-converter.gif",
+      "status": "In Progress",
+      "featured": true,
+      "github": "https://github.com/aslanbayli/pelmen",
+      "demo": "",
+      "type": "project",
+      "title": "Pelmen Coding Agent",
+      "id": "10ff59912478",
+      "path": "projects.md#pelmen",
+      "body": "A TypeScript coding agent CLI built with Bun, OpenRouter, Commander, and Ink/React, featuring streaming tool calls, surgical edits, session restore, model switching, context tracking, summarization, and reusable markdown skills.\n\nRelated topics: [[AI Agents]], [[Developer Tools]].",
+      "sections": [
+        {
+          "id": "b4ae8bbf3512e554",
+          "title": "Pelmen Coding Agent",
+          "text": "A TypeScript coding agent CLI built with Bun, OpenRouter, Commander, and Ink/React, featuring streaming tool calls, surgical edits, session restore, model switching, context tracking, summarization, and reusable markdown skills.\n\nRelated topics: [[AI Agents]], [[Developer Tools]].",
+          "url": "/#project-pelmen#b4ae8bbf3512e554"
+        }
+      ],
+      "url": "/#project-pelmen"
+    },
+    {
+      "slug": "firelens",
+      "summary": "A local-first hybrid code retrieval engine with AST symbols, semantic chunks, and incremental indexing.",
+      "tags": [
+        "Python",
+        "SQLite",
+        "Mojo",
+        "Embeddings",
+        "Streamlit"
+      ],
+      "image": "/images/streamlit-ss.png",
+      "status": "In Progress",
+      "featured": true,
+      "github": "https://github.com/aslanbayli/firelens",
+      "demo": "",
+      "type": "project",
+      "title": "FireLens",
+      "id": "c337c8b67bd7",
+      "path": "projects.md#firelens",
+      "body": "A local-first hybrid code retrieval engine that indexes repositories into SQLite with AST symbols, semantic chunks, embeddings, file metadata, incremental reindexing, exact/fuzzy/semantic search, MCP-compatible output, Streamlit UI, and Mojo-accelerated ranking kernels.\n\nRelated topics: [[Retrieval]], [[Developer Tools]].",
+      "sections": [
+        {
+          "id": "87b76612ce6608a8",
+          "title": "FireLens",
+          "text": "A local-first hybrid code retrieval engine that indexes repositories into SQLite with AST symbols, semantic chunks, embeddings, file metadata, incremental reindexing, exact/fuzzy/semantic search, MCP-compatible output, Streamlit UI, and Mojo-accelerated ranking kernels.\n\nRelated topics: [[Retrieval]], [[Developer Tools]].",
+          "url": "/#project-firelens#87b76612ce6608a8"
+        }
+      ],
+      "url": "/#project-firelens"
+    },
+    {
+      "slug": "meshnet",
+      "summary": "A heterogeneous graph neural network for identifying devices in mesh networks.",
+      "tags": [
+        "PyTorch",
+        "PyTorch Geometric",
+        "GNN",
+        "Python",
+        "ML"
+      ],
+      "image": "/images/project-meshnet.svg",
+      "status": "Complete",
+      "featured": true,
+      "github": "https://github.com/aslanbayli/MeshNet",
+      "demo": "",
+      "type": "project",
+      "title": "MeshNet",
+      "id": "664d80bdbb13",
+      "path": "projects.md#meshnet",
+      "body": "A heterogeneous Graph Neural Network built with PyTorch Geometric to identify devices in mesh networks using custom Device, Event, and Service nodes, hyperparameter sweeping, and weighted loss functions to reach 90% accuracy.\n\nRelated topics: [[Retrieval]].",
+      "sections": [
+        {
+          "id": "42f5be7c3db84034",
+          "title": "MeshNet",
+          "text": "A heterogeneous Graph Neural Network built with PyTorch Geometric to identify devices in mesh networks using custom Device, Event, and Service nodes, hyperparameter sweeping, and weighted loss functions to reach 90% accuracy.\n\nRelated topics: [[Retrieval]].",
+          "url": "/#project-meshnet#42f5be7c3db84034"
+        }
+      ],
+      "url": "/#project-meshnet"
+    },
+    {
+      "slug": "ai-agents",
+      "type": "topic",
+      "title": "AI Agents",
+      "summary": "Systems that plan, use tools, execute bounded work, and verify outcomes.",
+      "tags": [
+        "AI Agents",
+        "Engineering"
+      ],
+      "id": "13ac390f3e57",
+      "path": "topics/AI-Agents.md",
+      "body": "Agentic systems become useful when their behavior can be inspected and improved. Good workflows make responsibilities explicit across retrieval, planning, execution, and verification.",
+      "sections": [
+        {
+          "id": "65f5a3c6c5c21593",
+          "title": "AI Agents",
+          "text": "Agentic systems become useful when their behavior can be inspected and improved. Good workflows make responsibilities explicit across retrieval, planning, execution, and verification.",
+          "url": "/#knowledge#65f5a3c6c5c21593"
+        }
+      ],
+      "url": "/#knowledge"
+    },
+    {
+      "slug": "developer-tools",
+      "type": "topic",
+      "title": "Developer Tools",
+      "summary": "Tools that make context, prompts, outputs, and regressions visible during repeated engineering work.",
+      "tags": [
+        "Developer Tools",
+        "Engineering"
+      ],
+      "id": "7f091b91a48b",
+      "path": "topics/Developer-Tools.md",
+      "body": "Useful AI engineering tools optimize for inspection, comparison, and iteration instead of one-off magic moments.",
+      "sections": [
+        {
+          "id": "bce49574d9892598",
+          "title": "Developer Tools",
+          "text": "Useful AI engineering tools optimize for inspection, comparison, and iteration instead of one-off magic moments.",
+          "url": "/#knowledge#bce49574d9892598"
+        }
+      ],
+      "url": "/#knowledge"
+    },
+    {
+      "slug": "document-intelligence",
+      "type": "topic",
+      "title": "Document Intelligence",
+      "summary": "Extracting and reasoning over complex documents with layout, OCR, and vision-language systems.",
+      "tags": [
+        "Document Intelligence",
+        "AI Engineering"
+      ],
+      "id": "592f45d597d1",
+      "path": "topics/Document-Intelligence.md",
+      "body": "Document intelligence combines layout analysis, metadata extraction, OCR, and multimodal reasoning to turn complex files into useful structured evidence.",
+      "sections": [
+        {
+          "id": "b279d4ebf4f1c7a8",
+          "title": "Document Intelligence",
+          "text": "Document intelligence combines layout analysis, metadata extraction, OCR, and multimodal reasoning to turn complex files into useful structured evidence.",
+          "url": "/#knowledge#b279d4ebf4f1c7a8"
+        }
+      ],
+      "url": "/#knowledge"
+    },
+    {
+      "slug": "retrieval",
+      "type": "topic",
+      "title": "Retrieval",
+      "summary": "Grounding model answers in useful, evaluated source material.",
+      "tags": [
+        "RAG",
+        "Evaluation",
+        "AI Engineering"
+      ],
+      "id": "a3a141018eb8",
+      "path": "topics/Retrieval.md",
+      "body": "Retrieval quality is a product decision as much as a modeling decision. Corpus quality, representative questions, chunking, and evidence checks matter before adding more model capacity.",
+      "sections": [
+        {
+          "id": "952fb2fbad5bdc79",
+          "title": "Retrieval",
+          "text": "Retrieval quality is a product decision as much as a modeling decision. Corpus quality, representative questions, chunking, and evidence checks matter before adding more model capacity.",
+          "url": "/#knowledge#952fb2fbad5bdc79"
+        }
+      ],
+      "url": "/#knowledge"
+    },
+    {
+      "slug": "agent-swarms-model-economics",
+      "type": "blog",
+      "title": "Agent Swarms Make Model Choice an Architecture Decision",
+      "summary": "Cursor's swarm experiments are less a case for more agents than a case for better boundaries, memory, and verification.",
+      "tags": [
+        "AI Agents",
+        "Model Economics",
+        "Developer Tools"
+      ],
+      "date": "2026-07-27",
+      "excerpt": "Cursor's swarm experiments are less a case for more agents than a case for better boundaries, memory, and verification.",
+      "readTime": "7 min read",
+      "cover": "/images/swarm-motion-og.gif",
+      "id": "6fdf4c4dcfcb",
+      "path": "blog/public/agent-swarms-model-economics.md",
+      "body": "Cursor's article about agent swarms is easy to read as a story about scale. I think the more useful lesson is quieter: swarms change model selection from a runtime setting into an architectural decision.\n\n## More Agents Do Not Create More Clarity\n\nParallelism magnifies coordination quality. If responsibilities are vague, more workers create faster ambiguity. If tasks have sharp boundaries and useful handoffs, workers can move independently without losing the larger intent.\n\nWhen I build agent workflows, I want each step to leave behind an artifact that the next step can inspect: a task brief, a decision record, a patch, a test result, or a concise failure report.\n\n## The Real Unit Is a Verified Outcome\n\nCheap execution that creates rework is expensive. The useful unit is the cost of a completed, verified outcome: a feature that passes tests, a document workflow that extracts the right fields, or a research answer grounded in the right source material.\n\nReview adds latency and cost, but it is often cheaper than letting a bad assumption propagate through a task tree. Reliable progress is the product.\n\nRelated topics: [[AI Agents]], [[Developer Tools]].",
+      "sections": [
+        {
+          "id": "5230a66377345a2c",
+          "title": "Agent Swarms Make Model Choice an Architecture Decision",
+          "text": "Cursor's article about agent swarms is easy to read as a story about scale. I think the more useful lesson is quieter: swarms change model selection from a runtime setting into an architectural decision.",
+          "url": "/blog/agent-swarms-model-economics/#5230a66377345a2c"
+        },
+        {
+          "id": "5aead93a1699df85",
+          "title": "More Agents Do Not Create More Clarity",
+          "text": "## More Agents Do Not Create More Clarity\n\nParallelism magnifies coordination quality. If responsibilities are vague, more workers create faster ambiguity. If tasks have sharp boundaries and useful handoffs, workers can move independently without losing the larger intent.\n\nWhen I build agent workflows, I want each step to leave behind an artifact that the next step can inspect: a task brief, a decision record, a patch, a test result, or a concise failure report.",
+          "url": "/blog/agent-swarms-model-economics/#5aead93a1699df85"
+        },
+        {
+          "id": "62371bd355dd9f98",
+          "title": "The Real Unit Is a Verified Outcome",
+          "text": "## The Real Unit Is a Verified Outcome\n\nCheap execution that creates rework is expensive. The useful unit is the cost of a completed, verified outcome: a feature that passes tests, a document workflow that extracts the right fields, or a research answer grounded in the right source material.\n\nReview adds latency and cost, but it is often cheaper than letting a bad assumption propagate through a task tree. Reliable progress is the product.\n\nRelated topics: [[AI Agents]], [[Developer Tools]].",
+          "url": "/blog/agent-swarms-model-economics/#62371bd355dd9f98"
+        }
+      ],
+      "url": "/blog/agent-swarms-model-economics/"
+    },
+    {
+      "slug": "building-agent-workflows",
+      "type": "blog",
+      "title": "Building Agent Workflows That Stay Understandable",
+      "summary": "Practical notes on keeping AI agent systems observable, testable, and useful as they grow beyond demos.",
+      "tags": [
+        "AI Agents",
+        "Engineering"
+      ],
+      "date": "2026-06-12",
+      "excerpt": "Practical notes on keeping AI agent systems observable, testable, and useful as they grow beyond demos.",
+      "readTime": "5 min read",
+      "cover": "/images/blog-agents.svg",
+      "id": "6aad408c54a6",
+      "path": "blog/public/building-agent-workflows.md",
+      "body": "Agentic systems become useful when their behavior can be inspected and improved. The hard part is rarely calling a model. The hard part is building the surrounding workflow so decisions, failures, and tool calls remain legible.\n\n## Start With Boundaries\n\nA good workflow makes responsibilities explicit. Retrieval, planning, execution, and verification should each have observable inputs and outputs.\n\n> The goal is not to hide complexity. The goal is to make complexity reviewable.\n\nSmall interfaces make it easier to test behavior before adding more autonomy.\n\nRelated topics: [[AI Agents]], [[Retrieval]].",
+      "sections": [
+        {
+          "id": "4850e7cff77cefb4",
+          "title": "Building Agent Workflows That Stay Understandable",
+          "text": "Agentic systems become useful when their behavior can be inspected and improved. The hard part is rarely calling a model. The hard part is building the surrounding workflow so decisions, failures, and tool calls remain legible.",
+          "url": "/blog/building-agent-workflows/#4850e7cff77cefb4"
+        },
+        {
+          "id": "71a5ac31574b5e80",
+          "title": "Start With Boundaries",
+          "text": "## Start With Boundaries\n\nA good workflow makes responsibilities explicit. Retrieval, planning, execution, and verification should each have observable inputs and outputs.\n\n> The goal is not to hide complexity. The goal is to make complexity reviewable.\n\nSmall interfaces make it easier to test behavior before adding more autonomy.\n\nRelated topics: [[AI Agents]], [[Retrieval]].",
+          "url": "/blog/building-agent-workflows/#71a5ac31574b5e80"
+        }
+      ],
+      "url": "/blog/building-agent-workflows/"
+    },
+    {
+      "slug": "designing-ai-engineering-tools",
+      "type": "blog",
+      "title": "Designing AI Engineering Tools for Repeated Use",
+      "summary": "AI tooling should optimize for inspection, comparison, and iteration instead of one-off magic moments.",
+      "tags": [
+        "Developer Tools",
+        "LLMs"
+      ],
+      "date": "2026-04-27",
+      "excerpt": "AI tooling should optimize for inspection, comparison, and iteration instead of one-off magic moments.",
+      "readTime": "6 min read",
+      "cover": "/images/blog-tools.svg",
+      "id": "b5d81f79546b",
+      "path": "blog/public/designing-ai-engineering-tools.md",
+      "body": "The best engineering tools reduce cognitive overhead during repeated workflows. For AI systems, that means making context, prompts, outputs, latency, and regressions visible without forcing the user into a maze.\n\n## Prefer Comparison\n\nMost useful AI engineering work is comparative: one prompt against another, one model against another, one retrieval policy against another.\n\nInterfaces should make those comparisons cheap.\n\nRelated topics: [[Developer Tools]], [[AI Agents]].",
+      "sections": [
+        {
+          "id": "59a1c9f2a0cfde96",
+          "title": "Designing AI Engineering Tools for Repeated Use",
+          "text": "The best engineering tools reduce cognitive overhead during repeated workflows. For AI systems, that means making context, prompts, outputs, latency, and regressions visible without forcing the user into a maze.",
+          "url": "/blog/designing-ai-engineering-tools/#59a1c9f2a0cfde96"
+        },
+        {
+          "id": "10da332e2be1e8bd",
+          "title": "Prefer Comparison",
+          "text": "## Prefer Comparison\n\nMost useful AI engineering work is comparative: one prompt against another, one model against another, one retrieval policy against another.\n\nInterfaces should make those comparisons cheap.\n\nRelated topics: [[Developer Tools]], [[AI Agents]].",
+          "url": "/blog/designing-ai-engineering-tools/#10da332e2be1e8bd"
+        }
+      ],
+      "url": "/blog/designing-ai-engineering-tools/"
+    },
+    {
+      "slug": "measuring-retrieval-quality",
+      "type": "blog",
+      "title": "Measuring Retrieval Quality Before Adding More Models",
+      "summary": "Retrieval systems improve faster when evaluation starts with the corpus, queries, and failure modes.",
+      "tags": [
+        "RAG",
+        "Evaluation"
+      ],
+      "date": "2026-05-18",
+      "excerpt": "Retrieval systems improve faster when evaluation starts with the corpus, queries, and failure modes.",
+      "readTime": "4 min read",
+      "cover": "/images/blog-retrieval.svg",
+      "id": "2572a7d0b728",
+      "path": "blog/public/measuring-retrieval-quality.md",
+      "body": "Retrieval quality is a product decision as much as a modeling decision. The right chunking strategy depends on what people ask, what the corpus contains, and how answers are verified.\n\n## Make Failures Concrete\n\nTrack misses, partial matches, stale documents, and misleading neighbors separately. A single score can hide the exact issue that needs engineering attention.\n\nCode and dashboards help, but the most valuable artifact is a small set of representative questions that the system must answer well.\n\nRelated topics: [[Retrieval]], [[Developer Tools]].",
+      "sections": [
+        {
+          "id": "7ff6bf124f79e2fb",
+          "title": "Measuring Retrieval Quality Before Adding More Models",
+          "text": "Retrieval quality is a product decision as much as a modeling decision. The right chunking strategy depends on what people ask, what the corpus contains, and how answers are verified.",
+          "url": "/blog/measuring-retrieval-quality/#7ff6bf124f79e2fb"
+        },
+        {
+          "id": "41549d4012f8efd9",
+          "title": "Make Failures Concrete",
+          "text": "## Make Failures Concrete\n\nTrack misses, partial matches, stale documents, and misleading neighbors separately. A single score can hide the exact issue that needs engineering attention.\n\nCode and dashboards help, but the most valuable artifact is a small set of representative questions that the system must answer well.\n\nRelated topics: [[Retrieval]], [[Developer Tools]].",
+          "url": "/blog/measuring-retrieval-quality/#41549d4012f8efd9"
+        }
+      ],
+      "url": "/blog/measuring-retrieval-quality/"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "ea0fcc2f80a4",
+        "slug": "profile",
+        "type": "profile",
+        "title": "Ali Aslanbayli",
+        "summary": "AI engineer building agents, retrieval systems, developer tools, and reliable information workflows.",
+        "tags": [
+          "AI Engineering",
+          "AI Agents",
+          "Retrieval",
+          "Developer Tools"
+        ],
+        "url": "/#about"
+      },
+      {
+        "id": "d991fe14f51a",
+        "slug": "experience",
+        "type": "experience",
+        "title": "Professional Experience",
+        "summary": "Experience building AI systems, retrieval workflows, and developer tools.",
+        "tags": [
+          "AI Engineering",
+          "RAG",
+          "Document Intelligence"
+        ],
+        "url": "/#experience"
+      },
+      {
+        "id": "89f5641a4500",
+        "slug": "skills",
+        "type": "skills",
+        "title": "Skills",
+        "summary": "Technical skills across AI systems, retrieval, agents, and software engineering.",
+        "tags": [
+          "Python",
+          "TypeScript",
+          "RAG",
+          "AI Agents",
+          "Developer Tools"
+        ],
+        "url": "/#knowledge"
+      },
+      {
+        "id": "10ff59912478",
+        "slug": "pelmen",
+        "type": "project",
+        "title": "Pelmen Coding Agent",
+        "summary": "A TypeScript coding agent CLI with streaming tools, session restore, model switching, and context management.",
+        "tags": [
+          "TypeScript",
+          "Bun",
+          "AI Agents",
+          "OpenRouter",
+          "Ink"
+        ],
+        "url": "/#project-pelmen"
+      },
+      {
+        "id": "c337c8b67bd7",
+        "slug": "firelens",
+        "type": "project",
+        "title": "FireLens",
+        "summary": "A local-first hybrid code retrieval engine with AST symbols, semantic chunks, and incremental indexing.",
+        "tags": [
+          "Python",
+          "SQLite",
+          "Mojo",
+          "Embeddings",
+          "Streamlit"
+        ],
+        "url": "/#project-firelens"
+      },
+      {
+        "id": "664d80bdbb13",
+        "slug": "meshnet",
+        "type": "project",
+        "title": "MeshNet",
+        "summary": "A heterogeneous graph neural network for identifying devices in mesh networks.",
+        "tags": [
+          "PyTorch",
+          "PyTorch Geometric",
+          "GNN",
+          "Python",
+          "ML"
+        ],
+        "url": "/#project-meshnet"
+      },
+      {
+        "id": "13ac390f3e57",
+        "slug": "ai-agents",
+        "type": "topic",
+        "title": "AI Agents",
+        "summary": "Systems that plan, use tools, execute bounded work, and verify outcomes.",
+        "tags": [
+          "AI Agents",
+          "Engineering"
+        ],
+        "url": "/#knowledge"
+      },
+      {
+        "id": "7f091b91a48b",
+        "slug": "developer-tools",
+        "type": "topic",
+        "title": "Developer Tools",
+        "summary": "Tools that make context, prompts, outputs, and regressions visible during repeated engineering work.",
+        "tags": [
+          "Developer Tools",
+          "Engineering"
+        ],
+        "url": "/#knowledge"
+      },
+      {
+        "id": "592f45d597d1",
+        "slug": "document-intelligence",
+        "type": "topic",
+        "title": "Document Intelligence",
+        "summary": "Extracting and reasoning over complex documents with layout, OCR, and vision-language systems.",
+        "tags": [
+          "Document Intelligence",
+          "AI Engineering"
+        ],
+        "url": "/#knowledge"
+      },
+      {
+        "id": "a3a141018eb8",
+        "slug": "retrieval",
+        "type": "topic",
+        "title": "Retrieval",
+        "summary": "Grounding model answers in useful, evaluated source material.",
+        "tags": [
+          "RAG",
+          "Evaluation",
+          "AI Engineering"
+        ],
+        "url": "/#knowledge"
+      },
+      {
+        "id": "6fdf4c4dcfcb",
+        "slug": "agent-swarms-model-economics",
+        "type": "blog",
+        "title": "Agent Swarms Make Model Choice an Architecture Decision",
+        "summary": "Cursor's swarm experiments are less a case for more agents than a case for better boundaries, memory, and verification.",
+        "tags": [
+          "AI Agents",
+          "Model Economics",
+          "Developer Tools"
+        ],
+        "url": "/blog/agent-swarms-model-economics/"
+      },
+      {
+        "id": "6aad408c54a6",
+        "slug": "building-agent-workflows",
+        "type": "blog",
+        "title": "Building Agent Workflows That Stay Understandable",
+        "summary": "Practical notes on keeping AI agent systems observable, testable, and useful as they grow beyond demos.",
+        "tags": [
+          "AI Agents",
+          "Engineering"
+        ],
+        "url": "/blog/building-agent-workflows/"
+      },
+      {
+        "id": "b5d81f79546b",
+        "slug": "designing-ai-engineering-tools",
+        "type": "blog",
+        "title": "Designing AI Engineering Tools for Repeated Use",
+        "summary": "AI tooling should optimize for inspection, comparison, and iteration instead of one-off magic moments.",
+        "tags": [
+          "Developer Tools",
+          "LLMs"
+        ],
+        "url": "/blog/designing-ai-engineering-tools/"
+      },
+      {
+        "id": "2572a7d0b728",
+        "slug": "measuring-retrieval-quality",
+        "type": "blog",
+        "title": "Measuring Retrieval Quality Before Adding More Models",
+        "summary": "Retrieval systems improve faster when evaluation starts with the corpus, queries, and failure modes.",
+        "tags": [
+          "RAG",
+          "Evaluation"
+        ],
+        "url": "/blog/measuring-retrieval-quality/"
+      }
+    ],
+    "edges": [
+      {
+        "source": "ea0fcc2f80a4",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "ea0fcc2f80a4",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "ea0fcc2f80a4",
+        "target": "7f091b91a48b"
+      },
+      {
+        "source": "d991fe14f51a",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "d991fe14f51a",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "d991fe14f51a",
+        "target": "592f45d597d1"
+      },
+      {
+        "source": "10ff59912478",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "10ff59912478",
+        "target": "7f091b91a48b"
+      },
+      {
+        "source": "c337c8b67bd7",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "c337c8b67bd7",
+        "target": "7f091b91a48b"
+      },
+      {
+        "source": "664d80bdbb13",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "6fdf4c4dcfcb",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "6fdf4c4dcfcb",
+        "target": "7f091b91a48b"
+      },
+      {
+        "source": "6aad408c54a6",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "6aad408c54a6",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "b5d81f79546b",
+        "target": "7f091b91a48b"
+      },
+      {
+        "source": "b5d81f79546b",
+        "target": "13ac390f3e57"
+      },
+      {
+        "source": "2572a7d0b728",
+        "target": "a3a141018eb8"
+      },
+      {
+        "source": "2572a7d0b728",
+        "target": "7f091b91a48b"
+      }
+    ]
+  },
+  "warnings": []
+}

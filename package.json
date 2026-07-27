@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "knowledge": "node scripts/build-knowledge.mjs",
+    "index:vectorize": "node scripts/index-vectorize.mjs",
+    "prebuild": "npm run knowledge",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "astro": "ASTRO_TELEMETRY_DISABLED=1 astro",

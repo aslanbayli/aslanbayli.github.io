@@ -1,4 +1,10 @@
-# Professional Experience
+---
+slug: experience
+type: experience
+title: Professional Experience
+summary: Experience building AI systems, retrieval workflows, and developer tools.
+tags: [AI Engineering, RAG, Document Intelligence]
+---
 
 ## AI Engineer
 Providge Consulting | New York, NY | July 2026 - Present
@@ -13,3 +19,5 @@ NYU Research Technology Services | New York, NY | December 2024 - May 2026
 - Architected and deployed end-to-end Retrieval-Augmented Generation (RAG) pipelines using OpenWebUI and vector databases, improving model accuracy and reducing hallucinations for domain-specific queries.
 - Engineered real-time Python data-ingestion modules that integrate Google Search APIs, increasing LLM context coverage by 40% and enabling answers to live-event queries.
 - Built a user-facing agentic interface that automates complex data analysis, converting natural language directly into Pandas workflows to accelerate research operations.
+
+Related topics: [[Retrieval]], [[AI Agents]], [[Document Intelligence]].

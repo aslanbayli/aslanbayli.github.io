@@ -1,0 +1,57 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import { graph } from "../lib/knowledge";
+---
+
+<section id="knowledge" class="section">
+  <div class="container">
+    <SectionHeading
+      label="Knowledge Graph"
+      title="Explore the work behind the work."
+      description="Browse public projects, writing, topics, and experience as a connected map."
+    />
+    <div class="surface overflow-hidden rounded-[28px] p-4 md:p-6">
+      <div class="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-wrap gap-2" data-graph-filters>
+          {['all', 'project', 'blog', 'topic', 'experience', 'profile'].map((type) => <button type="button" data-graph-filter={type} class="graph-filter rounded-full border border-[color:var(--border)] px-3 py-1.5 text-sm font-semibold text-[color:var(--text-secondary)] transition hover:border-[color:var(--border-hover)]" aria-pressed={type === 'all'}>{type === 'all' ? 'All' : type}</button>)}
+        </div>
+        <label class="sr-only" for="graph-search">Search knowledge graph</label>
+        <input id="graph-search" data-graph-search type="search" placeholder="Search nodes" class="h-10 rounded-full border border-[color:var(--border)] bg-white/[.03] px-4 text-sm outline-none placeholder:text-[color:var(--muted)] focus:border-[color:var(--orange)]" />
+      </div>
+      <div class="grid gap-4 lg:grid-cols-[1fr_240px]">
+        <svg data-knowledge-graph viewBox="0 0 900 520" role="img" aria-label="Interactive graph of Ali's public knowledge" class="min-h-[360px] w-full rounded-2xl border border-[color:var(--border)] bg-[#0b0e17]"></svg>
+        <aside data-graph-preview class="rounded-2xl border border-[color:var(--border)] bg-white/[.025] p-5" aria-live="polite">
+          <p class="text-sm font-semibold uppercase tracking-[.12em] text-[color:var(--orange)]">Preview</p>
+          <p class="mt-5 text-[color:var(--text-secondary)]">Hover or focus a node to see its summary.</p>
+        </aside>
+      </div>
+      <p class="mt-4 text-sm text-[color:var(--muted)]">Use the filters or search field. Select a node to open its public source.</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" data-knowledge-graph-data set:html={JSON.stringify(graph)}></script>
+<script>
+  const graphRoot = document.querySelector("[data-knowledge-graph]");
+  const graphData = JSON.parse(document.querySelector("[data-knowledge-graph-data]")?.textContent || "{}") as { nodes: Array<{ id: string; title: string; summary: string; tags: string[]; type: string; url: string }>; edges: Array<{ source: string; target: string }> };
+  type GraphNode = (typeof graphData.nodes)[number] & { x: number; y: number };
+  const preview = document.querySelector("[data-graph-preview]");
+  const search = document.querySelector("[data-graph-search]") as HTMLInputElement | null;
+  if (graphRoot && graphData.nodes) {
+    const svg = graphRoot;
+    const ns = "http://www.w3.org/2000/svg";
+    const colors: Record<string, string> = { project: "#ff6b3d", blog: "#c56cff", topic: "#62a7ff", experience: "#4ade80", profile: "#f7f8fb" };
+    const positions = graphData.nodes.map((node, index) => ({ ...node, x: 90 + ((index * 173) % 720), y: 80 + ((index * 97) % 340) }));
+    const visible = (node: GraphNode) => !search?.value || `${node.title} ${node.summary} ${node.tags.join(" ")}`.toLowerCase().includes(search.value.toLowerCase());
+    let activeType = "all";
+    const showPreview = (node: GraphNode) => { if (preview) preview.innerHTML = `<p class="text-sm font-semibold uppercase tracking-[.12em]" style="color:${colors[node.type] || colors.profile}">${node.type}</p><h3 class="mt-3 font-display text-xl font-bold">${node.title}</h3><p class="mt-3 text-sm leading-6 text-[color:var(--text-secondary)]">${node.summary}</p>`; };
+    const render = () => {
+      svg.replaceChildren();
+      const filtered = positions.filter((node) => (activeType === "all" || node.type === activeType) && visible(node));
+      graphData.edges.forEach((edge) => { const source = filtered.find((node) => node.id === edge.source); const target = filtered.find((node) => node.id === edge.target); if (!source || !target) return; const line = document.createElementNS(ns, "line"); line.setAttribute("x1", String(source.x)); line.setAttribute("y1", String(source.y)); line.setAttribute("x2", String(target.x)); line.setAttribute("y2", String(target.y)); line.setAttribute("stroke", "rgba(255,255,255,.14)"); line.setAttribute("stroke-width", "1.5"); svg.append(line); });
+      filtered.forEach((node) => { const group = document.createElementNS(ns, "g"); group.setAttribute("transform", `translate(${node.x} ${node.y})`); group.setAttribute("tabindex", "0"); group.setAttribute("role", "link"); group.setAttribute("aria-label", `${node.title}: ${node.summary}`); group.style.cursor = "pointer"; const circle = document.createElementNS(ns, "circle"); circle.setAttribute("r", node.type === "profile" ? "15" : "11"); circle.setAttribute("fill", colors[node.type] || colors.profile); circle.setAttribute("fill-opacity", ".9"); const label = document.createElementNS(ns, "text"); label.textContent = node.title; label.setAttribute("y", "27"); label.setAttribute("text-anchor", "middle"); label.setAttribute("fill", "#dfe4ef"); label.setAttribute("font-size", "12"); group.append(circle, label); group.addEventListener("mouseenter", () => showPreview(node)); group.addEventListener("focus", () => showPreview(node)); group.addEventListener("click", () => { window.location.href = node.url; }); group.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); window.location.href = node.url; } }); svg.append(group); });
+    };
+    document.querySelectorAll("[data-graph-filter]").forEach((button) => button.addEventListener("click", () => { activeType = button.getAttribute("data-graph-filter") || "all"; document.querySelectorAll("[data-graph-filter]").forEach((item) => item.setAttribute("aria-pressed", String(item === button))); render(); }));
+    search?.addEventListener("input", render); render();
+  }
+</script>

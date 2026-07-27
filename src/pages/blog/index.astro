@@ -1,14 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
+import { posts } from "../../lib/knowledge";
 
-const modules = import.meta.glob("../../../content/blog/*.md", { eager: true });
-const posts = Object.entries(modules)
-  .map(([path, mod]: [string, any]) => ({
-    slug: path.split("/").pop()?.replace(".md", "") ?? "",
-    frontmatter: mod.frontmatter,
-  }))
-  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+const renderedPosts = posts.map((post) => ({
+  slug: post.slug,
+  frontmatter: {
+    title: post.title,
+    date: post.date ?? "",
+    excerpt: post.excerpt ?? post.summary,
+    readTime: post.readTime ?? "",
+    cover: post.cover,
+  },
+}));
 ---
 
 <Layout
@@ -26,7 +30,7 @@ const posts = Object.entries(modules)
       </p>
     </header>
     <div class="space-y-5">
-      {posts.map((post) => <BlogCard post={post} />)}
+      {renderedPosts.map((post) => <BlogCard post={post} />)}
     </div>
   </section>
 </Layout>

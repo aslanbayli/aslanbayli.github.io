@@ -6,7 +6,9 @@ import FeaturedProjects from "@components/FeaturedProjects.astro";
 import Hero from "@components/Hero.astro";
 import ProjectsGrid from "@components/ProjectsGrid.astro";
 import SkillsCarousel from "@components/SkillsCarousel.astro";
-import projects from "../../content/projects.json";
+import KnowledgeGraph from "@components/KnowledgeGraph.astro";
+import KnowledgeChat from "@components/KnowledgeChat.astro";
+import { projects } from "../lib/knowledge";
 
 const featured = projects.filter((project) => project.featured);
 const sortedProjects = [...projects].sort((a, b) => Number(b.featured) - Number(a.featured));
@@ -14,9 +16,11 @@ const sortedProjects = [...projects].sort((a, b) => Number(b.featured) - Number(
 
 <Layout>
   <Hero />
+  <KnowledgeChat />
   <AboutSection />
   <SkillsCarousel />
   <ExperienceSection />
   <FeaturedProjects projects={featured} />
   <ProjectsGrid projects={sortedProjects} />
+  <KnowledgeGraph />
 </Layout>

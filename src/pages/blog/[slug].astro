@@ -1,15 +1,16 @@
 ---
 import MarkdownLayout from "@layouts/MarkdownLayout.astro";
+import { posts } from "../../lib/knowledge";
 
 export async function getStaticPaths() {
-  const modules = import.meta.glob("../../../content/blog/*.md", { eager: true });
-  return Object.entries(modules).map(([path, post]: [string, any]) => ({
-    params: { slug: path.split("/").pop()?.replace(".md", "") },
-    props: { post },
+  const modules = import.meta.glob("../../../content/vault/blog/public/*.md", { eager: true });
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post: modules[`../../../content/vault/blog/public/${post.slug}.md`] },
   }));
 }
 
-const { post } = Astro.props;
+const { post } = Astro.props as { post: any };
 const { Content } = post;
 ---
 

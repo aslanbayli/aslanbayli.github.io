@@ -6,6 +6,7 @@ import StatusBadge from "./StatusBadge.astro";
 import Tag from "./Tag.astro";
 
 interface Project {
+  slug: string;
   title: string;
   description: string;
   image: string;
@@ -35,7 +36,7 @@ const opensNewTab = (href: string) => /^https?:\/\//.test(href);
     <div class="space-y-10">
       {
         projects.slice(0, 3).map((project, index) => (
-          <article class="surface card-hover fade-up overflow-hidden rounded-[24px] p-4 md:p-6 lg:p-8">
+          <article id={`project-${project.slug}`} class="surface card-hover fade-up overflow-hidden rounded-[24px] p-4 md:p-6 lg:p-8">
             <div class:list={["grid items-center gap-8 lg:grid-cols-2", index % 2 === 1 && "lg:[&>div:first-child]:order-2"]}>
               <div class="overflow-hidden rounded-[24px] border border-[color:var(--border)] bg-black/20">
                 <img

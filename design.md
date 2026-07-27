@@ -28,11 +28,15 @@ OR
 
 Content
 
-Projects:
-content/projects.json
+Portfolio content:
+content/vault/projects/*.md
 
-Blog:
-content/blog/*.md
+Public blog posts:
+content/vault/blog/public/*.md
+
+Experience and profile:
+content/vault/experience.md
+content/vault/profile.md
 
 Images:
 public/images/
