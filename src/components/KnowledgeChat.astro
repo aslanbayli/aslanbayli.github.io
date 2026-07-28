@@ -5,33 +5,29 @@ const endpoint = import.meta.env.PUBLIC_CHAT_ENDPOINT ?? "";
 <section class="section-tight pt-8 md:pt-12" aria-labelledby="chat-title">
   <div class="container">
     <div class="mx-auto max-w-[680px]">
-      <p class="mb-3 text-center text-[11px] font-medium uppercase tracking-[.16em] text-[color:var(--muted)]">Ask the agent</p>
+      <p class="mb-3 text-center text-[14px] font-medium uppercase tracking-[.16em] text-[color:var(--muted)]">Ask anything about Ali</p>
       <h2 id="chat-title" class="sr-only">Ask about Ali's work</h2>
       <div data-chat-messages hidden class="chat-conversation" aria-live="polite"></div>
       <form data-chat-form class="chatbox">
         <label class="sr-only" for="chat-message">Ask about Ali's work</label>
         <textarea id="chat-message" data-chat-input rows="1" maxlength="500" placeholder="What do you want to know?"></textarea>
-        <div class="chat-toolbar">
-          <p class="text-xs text-[color:var(--muted)]">Grounded in public work and writing</p>
-          <button data-chat-send type="submit" class="chat-send" aria-label="Send question" disabled>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
-          </button>
-        </div>
+        <button data-chat-send type="submit" class="chat-send" aria-label="Send question" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
+        </button>
       </form>
-      <p data-chat-status class="mt-3 text-center text-sm text-[color:var(--muted)]">Answers include links to their public sources.</p>
+      <p data-chat-status class="mt-3 text-center text-sm text-[color:var(--muted)]">Grounded in Ali's experience, projects and blogs.</p>
     </div>
   </div>
 </section>
 
 <style>
-  .chatbox { border: 1px solid var(--border); border-radius: 22px; padding: 16px 16px 12px; background: rgba(255,255,255,.035); box-shadow: inset 0 1px 0 rgba(255,255,255,.02), 0 20px 40px -20px rgba(0,0,0,.6); transition: border-color .2s ease, box-shadow .2s ease, background .2s ease; }
+  .chatbox { position: relative; border: 1px solid var(--border); border-radius: 22px; padding: 16px 16px 12px; background: rgba(255,255,255,.035); box-shadow: inset 0 1px 0 rgba(255,255,255,.02), 0 20px 40px -20px rgba(0,0,0,.6); transition: border-color .2s ease, box-shadow .2s ease, background .2s ease; }
   .chat-conversation { max-height: 360px; margin-bottom: 16px; padding: 4px 2px 4px 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.2) transparent; }
-  .chat-conversation > * + * { margin-top: 24px; }
+  :global(.chat-conversation > * + *) { margin-top: 36px; }
   .chatbox:focus-within { border-color: rgba(255,107,61,.45); background: rgba(255,255,255,.055); box-shadow: 0 0 0 3px rgba(255,107,61,.12), 0 20px 40px -20px rgba(0,0,0,.6); }
-  .chatbox textarea { display: block; width: 100%; max-height: 200px; resize: none; overflow-y: auto; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; font-size: 15px; line-height: 1.5; padding: 4px 4px 8px; }
+  .chatbox textarea { display: block; width: 100%; max-height: 200px; resize: none; overflow-y: auto; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; font-size: 15px; line-height: 1.5; padding: 4px 48px 8px 4px; }
   .chatbox textarea::placeholder { color: var(--muted); }
-  .chat-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
-  .chat-send { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: var(--orange); color: #160b08; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease; }
+  .chat-send { position: absolute; top: 14px; right: 14px; display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: var(--orange); color: #160b08; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease; }
   .chat-send svg { width: 16px; height: 16px; }
   .chat-send:disabled { background: rgba(255,255,255,.08); color: rgba(255,255,255,.35); cursor: not-allowed; }
   .chat-send:not(:disabled):hover { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(255,107,61,.12); }

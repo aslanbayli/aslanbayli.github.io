@@ -20,7 +20,7 @@ demo: ""
 
 A TypeScript coding agent CLI built with Bun, OpenRouter, Commander, and Ink/React, featuring streaming tool calls, surgical edits, session restore, model switching, context tracking, summarization, and reusable markdown skills.
 
-Related topics: [[AI Agents]], [[Developer Tools]].
+Related: [[firelens]], [[agent-swarms-model-economics]].
 
 ## FireLens
 <!--
@@ -36,7 +36,7 @@ demo: ""
 
 A local-first hybrid code retrieval engine that indexes repositories into SQLite with AST symbols, semantic chunks, embeddings, file metadata, incremental reindexing, exact/fuzzy/semantic search, MCP-compatible output, Streamlit UI, and Mojo-accelerated ranking kernels.
 
-Related topics: [[Retrieval]], [[Developer Tools]].
+Related: [[pelmen]].
 
 ## MeshNet
 <!--
@@ -52,4 +52,4 @@ demo: ""
 
 A heterogeneous Graph Neural Network built with PyTorch Geometric to identify devices in mesh networks using custom Device, Event, and Service nodes, hyperparameter sweeping, and weighted loss functions to reach 90% accuracy.
 
-Related topics: [[Retrieval]].
+Related: [[experience]].

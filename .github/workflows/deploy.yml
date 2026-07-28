@@ -36,6 +36,7 @@ jobs:
         env:
           SITE: https://aslanbayli.github.io
           BASE_PATH: /
+          PUBLIC_CHAT_ENDPOINT: ${{ vars.PUBLIC_CHAT_ENDPOINT }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

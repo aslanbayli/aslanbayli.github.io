@@ -14,7 +14,6 @@ const dirs = [
   "experience.md",
   "skills.md",
   "projects.md",
-  "topics",
   "blog/public",
   "blog/private",
 ];

@@ -20,4 +20,4 @@ NYU Research Technology Services | New York, NY | December 2024 - May 2026
 - Engineered real-time Python data-ingestion modules that integrate Google Search APIs, increasing LLM context coverage by 40% and enabling answers to live-event queries.
 - Built a user-facing agentic interface that automates complex data analysis, converting natural language directly into Pandas workflows to accelerate research operations.
 
-Related topics: [[Retrieval]], [[AI Agents]], [[Document Intelligence]].
+Related: [[agent-swarms-model-economics]], [[pelmen]].

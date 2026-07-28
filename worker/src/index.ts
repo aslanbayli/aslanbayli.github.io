@@ -147,6 +147,7 @@ export default {
         topK: 5,
         returnMetadata: "all",
       });
+      const citationTypes = new Set(["experience", "project", "blog"]);
       const sources = (matches.matches || [])
         .filter((match) => Number(match.score || 0) >= 0.35)
         .map((match) => ({
@@ -154,6 +155,7 @@ export default {
           title: String(match.metadata?.title || "Public source"),
           url: String(match.metadata?.url || "/#knowledge"),
           text: String(match.metadata?.text || ""),
+          type: String(match.metadata?.type || ""),
         }));
       if (!sources.length)
         return json(
@@ -172,7 +174,7 @@ export default {
             `[Source ${index + 1}] ${source.title}\n${source.text}`,
         )
         .join("\n\n");
-      const system = `You are the concise portfolio assistant for Ali Aslanbayli. Use only the supplied public sources. If they do not support an answer, say you do not have enough evidence. Never mention private notes. Answer the latest question only in two or three short sentences, under 70 words total. Do not write labels such as "Answer", follow-up questions, notes, disclaimers, or citation markers.\n\nPublic sources:\n${context}`;
+      const system = `You are the concise portfolio assistant for Ali Aslanbayli. Use only the supplied sources. If they do not support an answer, say you do not have enough evidence. Answer the latest question only in two or three short sentences, under 70 words total. Do not write labels such as "Answer", follow-up questions, notes, disclaimers, or citation markers.\n\nPublic sources:\n${context}`;
       const result = (await env.AI.run("@cf/meta/llama-3.2-3b-instruct", {
         messages: [
           { role: "system", content: system },
@@ -192,8 +194,12 @@ export default {
         );
       return json(
         {
-          answer: conciseAnswer(result.response) || "I do not have enough evidence to answer that.",
-          sources: sources.map(({ id, title, url }) => ({ id, title, url })),
+          answer:
+            conciseAnswer(result.response) ||
+            "I do not have enough evidence to answer that.",
+          sources: sources
+            .filter((source) => citationTypes.has(source.type))
+            .map(({ id, title, url }) => ({ id, title, url })),
         },
         200,
         origin,

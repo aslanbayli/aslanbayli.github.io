@@ -8,12 +8,12 @@ import { graph } from "../lib/knowledge";
     <SectionHeading
       label="Knowledge Graph"
       title="Explore the work behind the work."
-      description="Browse public projects, writing, topics, and experience as a connected map."
+      description="Browse public projects, writing, experience, and skills as a connected map."
     />
     <div class="surface overflow-hidden rounded-[28px] p-4 md:p-6">
       <div class="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div class="flex flex-wrap gap-2" data-graph-filters>
-          {['all', 'project', 'blog', 'topic', 'experience', 'profile'].map((type) => <button type="button" data-graph-filter={type} class="graph-filter rounded-full border border-[color:var(--border)] px-3 py-1.5 text-sm font-semibold text-[color:var(--text-secondary)] transition hover:border-[color:var(--border-hover)]" aria-pressed={type === 'all'}>{type === 'all' ? 'All' : type}</button>)}
+          {['all', 'project', 'blog', 'experience', 'skills', 'profile'].map((type) => <button type="button" data-graph-filter={type} class="graph-filter rounded-full border border-[color:var(--border)] px-3 py-1.5 text-sm font-semibold text-[color:var(--text-secondary)] transition hover:border-[color:var(--border-hover)]" aria-pressed={type === 'all'}>{type === 'all' ? 'All' : type}</button>)}
         </div>
         <label class="sr-only" for="graph-search">Search knowledge graph</label>
         <input id="graph-search" data-graph-search type="search" placeholder="Search nodes" class="h-10 rounded-full border border-[color:var(--border)] bg-white/[.03] px-4 text-sm outline-none placeholder:text-[color:var(--muted)] focus:border-[color:var(--orange)]" />
@@ -40,7 +40,7 @@ import { graph } from "../lib/knowledge";
   if (graphRoot && graphData.nodes) {
     const svg = graphRoot;
     const ns = "http://www.w3.org/2000/svg";
-    const colors: Record<string, string> = { project: "#ff6b3d", blog: "#c56cff", topic: "#62a7ff", experience: "#4ade80", profile: "#f7f8fb" };
+    const colors: Record<string, string> = { project: "#ff6b3d", blog: "#c56cff", experience: "#4ade80", skills: "#62a7ff", profile: "#f7f8fb" };
     const positions = graphData.nodes.map((node, index) => ({ ...node, x: 90 + ((index * 173) % 720), y: 80 + ((index * 97) % 340) }));
     const visible = (node: GraphNode) => !search?.value || `${node.title} ${node.summary} ${node.tags.join(" ")}`.toLowerCase().includes(search.value.toLowerCase());
     let activeType = "all";

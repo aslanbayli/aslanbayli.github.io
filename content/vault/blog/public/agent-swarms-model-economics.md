@@ -24,4 +24,4 @@ Cheap execution that creates rework is expensive. The useful unit is the cost of
 
 Review adds latency and cost, but it is often cheaper than letting a bad assumption propagate through a task tree. Reliable progress is the product.
 
-Related topics: [[AI Agents]], [[Developer Tools]].
+Related: [[experience]], [[pelmen]].

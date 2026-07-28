@@ -2,11 +2,21 @@
 slug: skills
 type: skills
 title: Skills
-summary: Technical skills across AI systems, retrieval, agents, and software engineering.
-tags: [Python, TypeScript, RAG, AI Agents, Developer Tools]
+summary: A functional stack across product engineering, AI infrastructure, systems, and deployment.
+tags: [Python, TypeScript, Go, React, PyTorch, Docker, AWS]
 ---
 
-- AI systems: multimodal document understanding, OCR, vision-language models, agent orchestration.
-- Retrieval: RAG pipelines, embeddings, vector databases, evaluation, semantic search.
-- Engineering: Python, TypeScript, Bun, SQLite, PyTorch, PyTorch Geometric, Streamlit, Mojo.
-- Product thinking: observability, verification, clear interfaces, and reliable workflows.
+## Languages & Runtimes
+Python, JavaScript, TypeScript, Go, C/C++, Mojo, Bun.
+
+## Frontend
+React.
+
+## AI & Machine Learning
+PyTorch, TensorFlow, NumPy, Pandas, OpenCV, LangChain, LlamaIndex, OpenAI, Ollama, MLflow, Ray.
+
+## Backend & Data
+PostgreSQL, FastAPI, Redis.
+
+## Infrastructure & Tooling
+Docker, Linux, Git, AWS, GCP, OpenShift.
