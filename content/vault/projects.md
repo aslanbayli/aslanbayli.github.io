@@ -31,7 +31,7 @@ image: /images/streamlit-ss.png
 status: In Progress
 featured: true
 github: https://github.com/aslanbayli/firelens
-demo: ""
+demo: https://firelens.aliaslanbayli.workers.dev
 -->
 
 A local-first hybrid code retrieval engine that indexes repositories into SQLite with AST symbols, semantic chunks, embeddings, file metadata, incremental reindexing, exact/fuzzy/semantic search, MCP-compatible output, Streamlit UI, and Mojo-accelerated ranking kernels.

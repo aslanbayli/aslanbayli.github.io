@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T01:35:29.401Z",
+  "generatedAt": "2026-08-16T21:37:30.963Z",
   "notes": [
     {
       "slug": "profile",
@@ -172,7 +172,7 @@
       "status": "In Progress",
       "featured": true,
       "github": "https://github.com/aslanbayli/firelens",
-      "demo": "",
+      "demo": "https://firelens.aliaslanbayli.workers.dev",
       "type": "project",
       "title": "FireLens",
       "id": "c337c8b67bd7",
